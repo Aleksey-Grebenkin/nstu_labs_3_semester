@@ -5,7 +5,7 @@ using namespace std;
 RandomGenerator::RandomGenerator(const string& name, int N)
 {
     if (N <= 0)
-        throw invalid_argument("ÌÂ‰ÓÔÛÒÚËÏÓÂ ÁÌ‡˜ÂÌËÂ N");
+        throw invalid_argument("invalid variable value");
     this->name = name;
     this->N = N;
 }
@@ -44,7 +44,7 @@ int RandomGenerator::AverageNumbers() const
 {
     int sum = 0;
     if (N > sequence.size())
-        throw out_of_range("‚˚ıÓ‰ Á‡ ÔÂ‰ÂÎ˚ ÁÌ‡˜ÂÌËÈ");
+        throw out_of_range("invalid variable value");
 
     for (int i = sequence.size() - 1; i + 1 > sequence.size()  - N; i--)
     {
@@ -55,6 +55,5 @@ int RandomGenerator::AverageNumbers() const
 
 double RandomGenerator::getRand() const
 {
-    // TODO: Ì‡ÔËÒ‡Ú¸ ÙÓÏÛÎÛ
     return rand();
 }
